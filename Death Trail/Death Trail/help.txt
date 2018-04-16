@@ -1,0 +1,19 @@
+
+
+Here is a list of commands.
++++++++++++++++++++++++++++++++++++++++++++
+__________________General__________________
+help		: a list of commands
+whereami	: a description of your suroundings
+target		: select a target to interact with
+moveon		: move on to the next encounter
+search		: search for things to interact with
++++++++++++++++++++++++++++++++++++++++++++
+__________________Combat___________________
+attack [target]	: attack a target, if no target is given you will attack what ever you have currently c
++++++++++++++++++++++++++++++++++++++++++++
+_________________inventory_________________
+inventory	: a listing of what is in your inventory
+drop [item]	: drop the targetted item
+
+

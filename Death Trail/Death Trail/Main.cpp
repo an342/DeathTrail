@@ -1,37 +1,58 @@
 #include<iostream>
 #include <map>
 #include <string>
-#include "functions.h"
-
+#include "Commands.h"
+#include "items.h"
 using namespace std;
 
 // main function 
 // where the execution of program begins
+enum statemachine
+{
+	NONE,
+	MAINMENU,
+	LOADING,
+	OUT_OF_COMBAT,
+	IN_COMBAT,
+	DEAD
+};
+
+
+
 int main()
 {
 	string input;
 	bool breakwhile = false;
+	bool debug = true;
 	map <string, int> commands =
 	{
-		{"test1", 0},
+		{" ", 0},
 		{ "help", 1 },
 		{"whereami", 2},
-		{"hint", 3}
+		{"hint", 3},
+		{"exit", 4}
 
 	};
+
 	Welcome();
-	// prints heelo world
+
+	//runing while
 	while (!breakwhile)
 	{
 		cout << "gimmie somthing: ";
-		cin >> input;
+		//cin >> input;
+		getline(cin, input);
 
-		cout << "" << input << "/n ";
-		//cout << input << '\n';
+		if (debug)
+		{
+			cout << "input: " << input << endl;
+			cout << "command map: " << commands[input] << endl;
+		}
+		
 		switch (commands[input])
 		{
 		case 0:
-			cout << "test command please ignore" << '\n';
+			cout << "command not recognized\n";
 			break;
 		case 1:
 			// help command
@@ -43,8 +64,13 @@ int main()
 		case 3:
 			cout << "hint command, not built yet" << '\n';
 			break;
+		case 4:
+			cout << "exiting...\n";
+			Sleep(2000);
+			breakwhile = true;
+			break;
 		default:
-			cout << "command not recognized" << '\n';
+			cout << "Input ERROR: defaut input switch triggered contact developer for assistance." << '\n';
 			break;
 		}
 	}

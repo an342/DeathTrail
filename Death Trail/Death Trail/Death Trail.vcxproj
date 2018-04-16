@@ -78,9 +78,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="functions.h" />
+    <ClInclude Include="Commands.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="InParser.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Items.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Commands.cpp" />
+    <ClCompile Include="InParser.cpp" />
+    <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
