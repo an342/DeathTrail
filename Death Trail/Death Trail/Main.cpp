@@ -17,13 +17,13 @@ enum statemachine
 	DEAD
 };
 
-
+bool debug = true;
 
 int main()
 {
 	string input;
 	bool breakwhile = false;
-	bool debug = true;
+	
 	map <string, int> commands =
 	{
 		{" ", 0},

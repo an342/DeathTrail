@@ -27,7 +27,7 @@
     <ClInclude Include="Items.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="InParser.h">
+    <ClInclude Include="InputParser.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClCompile Include="Commands.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InParser.cpp">
+    <ClCompile Include="InputParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

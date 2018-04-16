@@ -80,13 +80,13 @@
   <ItemGroup>
     <ClInclude Include="Commands.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="InParser.h" />
+    <ClInclude Include="InputParser.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Items.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Commands.cpp" />
-    <ClCompile Include="InParser.cpp" />
+    <ClCompile Include="InputParser.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
