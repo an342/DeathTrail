@@ -81,6 +81,7 @@
     <ClInclude Include="Commands.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="InputParser.h" />
+    <ClInclude Include="Main.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Items.h" />
   </ItemGroup>

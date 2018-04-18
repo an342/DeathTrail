@@ -4,8 +4,10 @@
 #include <chrono>
 #include <thread>
 #include <windows.h>
-#include "Commands.h"
 #include <fstream>
+
+#include "Commands.h"
+#include "Main.h"
 
 using namespace std;
 
@@ -48,4 +50,11 @@ void whereami()
 void attack()
 {
 
+}
+
+void Exit()
+{
+	cout << "exiting...\n";
+	Sleep(2000);
+	//breakwhile = true;
 }

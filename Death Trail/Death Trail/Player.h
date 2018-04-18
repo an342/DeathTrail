@@ -10,7 +10,7 @@ class Player
 {
 	int inventorysize, healthPoints;
 	inventory inv;
-	Weapon equiped;
-
+	weapon equiped;
+	item selected;
 
 };

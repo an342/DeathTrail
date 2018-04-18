@@ -19,7 +19,7 @@ enum itemID
 
 
 
-class Item
+class item
 {
 	int weight, quantity;
 	string description;
@@ -29,7 +29,7 @@ public:
 
 };
 
-class Weapon : public Item
+class weapon : public item
 {
 	int maxAmmo, damage;
 	string ammoType;
@@ -38,6 +38,6 @@ class Weapon : public Item
 class inventory
 {
 	int size;
-	Item items[256];
+	item items[256];
 
 };

@@ -11,7 +11,7 @@ class Enemy
 {
 	int inventorysize, healthPoints;
 	inventory inv;
-	Weapon equiped;
+	weapon equiped;
 
 
 };
