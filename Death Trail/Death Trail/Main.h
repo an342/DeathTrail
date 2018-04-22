@@ -3,11 +3,12 @@ using namespace std;
 enum playerstate
 {
 	NONE,
-	MAINMENU,
+	MAIN_MENU,
 	LOADING,
 	OUT_OF_COMBAT,
 	IN_COMBAT,
 	DEAD
 };
 
+extern playerstate state;
 extern bool debug;

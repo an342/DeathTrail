@@ -8,6 +8,7 @@
 
 #include "Commands.h"
 #include "Main.h"
+#include "Encounter.h";
 
 using namespace std;
 
@@ -19,6 +20,7 @@ void Welcome()
 	system("pause");
 	Sleep(2000);
 	cout << "Lets begin.\n";
+	state = MAIN_MENU;
 }
 
 void help()
@@ -28,10 +30,7 @@ void help()
 	string helpout;
 	string line;
 
-
 	myfile.open("help.txt");
-
-
 
 	while (getline(myfile, line))
 	{

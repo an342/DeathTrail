@@ -2,22 +2,28 @@
 #include <map>
 #include <string>
 #include <vector>
+
 #include "Main.h"
 #include "Commands.h"
 #include "Items.h"
 #include "InputParser.h"
+#include "States.h"
+
 using namespace std;
 
 // main function 
 // where the execution of program begins
 
 bool debug = true;
+playerstate state = NONE;
 
 int main()
 {
 	string input;
 	bool breakwhile = false;
 	vector <string> coms;
+
+	
 	//bool debug = true;
 	
 	map <string, int> commands =
@@ -36,7 +42,7 @@ int main()
 		{ "select", SELECT },
 		{ "drop", DROP },
 		{ "exit", EXIT }
-
+		 
 	};
 
 	Welcome();
@@ -62,30 +68,20 @@ int main()
 			for (size_t i = 0; i < coms.size(); i++)
 				cout << "command: " << coms[i] << endl;
 		}
-
-		switch (commands[input])
+		switch (state)
 		{
-		case UNRECOGNIZED:												// add command recogniation function to give better responses
-			cout << "command not recognized\n";
+		case NONE:
+			
 			break;
-		case HELP:
-			// run help command
-			help();
+		case MAIN_MENU:
+			MainMenu( commands[input]);
 			break;
-		case WHEREAMI:
-			cout << "whereami command, not built yet" << '\n';
+		case LOADING:
 			break;
-		case HINT:
-			cout << "hint command, not built yet" << '\n';
-			break;
-		case EXIT:
-			Exit();
-			break;
-		case ATTACK:
-			cout << "ATTACK command, not built yet" << '\n';
+		case OUT_OF_COMBAT:
 			break;
 		default:
-			cout << "Input ERROR: defaut input switch triggered contact developer for assistance." << endl;
+			cout << "Default of state switch_________" << endl;
 			break;
 		}
 	}

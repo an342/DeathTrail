@@ -9,14 +9,17 @@
 
 class Enemy
 {
-	int inventorysize, healthPoints;
+	int inventorysize, inventorymin, inventorymax, healthPoints;
 	inventory inv;
 	weapon equiped;
 
+public:
+	
 
 };
 
 class Zombie : public Enemy 
 {
-
+	int inventorymin = 1;
+	int inventorymax = 5;
 };
