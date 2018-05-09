@@ -80,16 +80,16 @@
   <ItemGroup>
     <ClInclude Include="Commands.h" />
     <ClInclude Include="Encounter.h" />
-    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Entities.h" />
     <ClInclude Include="InputParser.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="Items.h" />
-    <ClInclude Include="states.h" />
+    <ClInclude Include="States.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Commands.cpp" />
     <ClCompile Include="Encounter.cpp" />
+    <ClCompile Include="Entities.cpp" />
     <ClCompile Include="InputParser.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />

@@ -2,18 +2,22 @@
 #include <map>
 #include <string>
 #include <vector>
-#include "Main.h"
+
+#include "States.h"
 #include "Commands.h"
-#include "Items.h"
-#include "InputParser.h"
+
 
 using namespace std;
+
+
+
+
 void MainMenu(int input)
 {
 	switch (input)
 	{
 	case UNRECOGNIZED:												// add command recogniation function to give better responses
-		cout << "command not recognized\n";
+		cout << "command not recognized.\n";
 		break;
 	case HELP:
 		// run help command
@@ -27,6 +31,12 @@ void MainMenu(int input)
 		break;
 	case EXIT:
 		Exit();
+		break;
+	case PLAY:
+		Play();
+		break;
+	case DEBUG:
+		Debug();
 		break;
 	default:
 		cout << "you can not use that righ`t now!" << endl;

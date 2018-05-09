@@ -1,29 +1,47 @@
 #include <map>
 #include <string>
+#include <vector>
 
-#include "InputParser.h"
-#include "Items.h"
-#include "Player.h"
-#include "Enemy.h"
+#include "Entities.h"
+
 
 using namespace std;
 
-enum location
+enum Location
 {
 	ROAD,
 	DARK_ROAD,
 	GASS_STATION,
 	QUICKY_MART,
 	SCHOOL,
+	MALL
 
 };
 
-class encounter
+class Encounter
 {
+	
+public:
 	int enemies, lootcount;
-	location loc;
+	vector<Enemy> enemyList;
+	Enemy opponent;
+	vector<Item> itemList;
+	Inventory inv;
+	Location loc;
+
+	Encounter()
+	{
+		enemies = 1;
+		loc = ROAD;
+		lootcount = 2;
+			/*for (int i = 0; i < enemies; i++)
+		{
+		Zombie test;
+		enemyList.push_back(test);
+		}*/
+	};
 
 };
 
-encounter NewEncounter();
+Encounter NewEncounter(float difficulty);
 

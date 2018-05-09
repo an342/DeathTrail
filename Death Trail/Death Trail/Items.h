@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -12,32 +13,67 @@ enum itemID
 	SHOTGUNSHELLS,
 	SHOTGUN,
 	PISTOLAMMO,
-	PISTOL,
+	PISTOL
 };
 
 
 
 
 
-class item
+class Item
 {
 	int weight, quantity;
 	string description;
+	itemID ID;
 public:
 	void setWeight(int weightset) { weight = weightset; }
 	int getWeight() { return weight; }
+	itemID getID()
+	{
+		return ID;
+	}
+	int UseOne() 
+	{
+		if (quantity > 0)
+		{
+			quantity--;
+			return quantity;
+		}
+		else
+			return 0;
+	}
 
 };
 
-class weapon : public item
+class Weapon : public Item
 {
 	int maxAmmo, damage;
 	string ammoType;
 };
-
-class inventory
+ 
+class Inventory
 {
 	int size;
-	item items[256];
+	vector <Item> items;
+public:
+	bool AddItem(Item item)
+	{
+		items.push_back(item);
+	}
+	bool RemoveItem(Item item)
+	{
+		for (int i = 0; i < items.size(); i++)
+		{
+			if (item.getID() == items[i].getID())
+			{
+
+			}
+
+		}
+	}
+	void CheckInv() 
+	{
+
+	}
 
 };

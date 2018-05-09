@@ -1,14 +1,19 @@
+#include <vector>
+#include "Encounter.h"
+#include "Commands.h"
+#include "States.h"
 using namespace std;
 
-enum playerstate
-{
-	NONE,
-	MAIN_MENU,
-	LOADING,
-	OUT_OF_COMBAT,
-	IN_COMBAT,
-	DEAD
-};
+class Encoutner;
+
+
 
 extern playerstate state;
+
 extern bool debug;
+extern bool breakwhile;
+
+extern map <string, int> commands;
+
+extern Encounter currentEnc;
+extern vector <Encounter> encList;

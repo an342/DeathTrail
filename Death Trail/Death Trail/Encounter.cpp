@@ -1,17 +1,18 @@
 #include <map>
 #include <string>
 
-#include "InputParser.h"
-#include "Items.h"
-#include "Player.h"
-#include "Enemy.h"
+
+//#include "Include.h"
+//#include "Items.h"
+//#include "Player.h"
+//#include "Enemy.h"
 #include "Encounter.h"
 
 using namespace std;
 
 
-encounter NewEncounter()
+Encounter NewEncounter(float difficulty)
 {
-	encounter test;
+	Encounter test;
 	return test;
 }
