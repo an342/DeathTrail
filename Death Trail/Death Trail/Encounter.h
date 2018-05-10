@@ -27,7 +27,7 @@ class Encounter
 public:
 	int enemies, lootcount;
 	vector<Enemy> enemyList;
-	Enemy opponent;
+	Zombie opponent;
 	vector<Item> itemList;
 	Inventory inv;
 	Location loc;
@@ -38,6 +38,7 @@ public:
 		loc = ROAD;
 		desc = locDesc[loc];
 		lootcount = 2;
+		enemyList.push_back(opponent);
 			/*for (int i = 0; i < enemies; i++)
 		{
 		Zombie test;

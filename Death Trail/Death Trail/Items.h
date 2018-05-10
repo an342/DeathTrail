@@ -47,8 +47,24 @@ public:
 
 class Weapon : public Item
 {
-	int maxAmmo, damage;
+	int maxAmmo, damage, ammo;
 	string ammoType;
+public:
+	Weapon()
+	{
+		maxAmmo = 0;
+		ammo = 0;
+		damage = 7;
+		ammoType = "Fist";
+	}
+	string GetType()
+	{
+		return ammoType;
+	}
+	int GetDamage()
+	{
+		return damage;
+	}
 };
  
 class Inventory
@@ -77,3 +93,6 @@ public:
 	}
 
 };
+
+Item GenerateItem();
+Inventory GenerateInv();

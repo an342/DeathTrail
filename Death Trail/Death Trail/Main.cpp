@@ -11,15 +11,16 @@ using namespace std;
 // main function 
 // where the execution of program begins
 
-bool debug = true;
+bool debug = false;
 bool breakwhile = false;
 
 playerstate state = NONE;
-Encounter currentEnc;
 int encounterCount;
+Encounter currentEnc;
 vector <Encounter> encList;
+Player player;
 
-map <string, int> commands =
+map <string, commands> command =
 {
 	{ " ", UNRECOGNIZED },
 	{ "help", HELP },
@@ -28,6 +29,7 @@ map <string, int> commands =
 	{ "exit", EXIT },
 	{ "load", LOAD },
 	{ "attack", ATTACK },
+	{ "target", TARGET },
 	{ "use", USE },
 	{ "inventory", INVENTORY },
 	{ "moveon", MOVEON },
@@ -45,6 +47,7 @@ int main()
 	
 	vector <string> coms;
 
+	
 
 	Welcome();
 
@@ -53,16 +56,12 @@ int main()
 	{
 		cout << ": ";
 		//cin >> input;
-		getline(cin, input);
-		
-		if (debug)
+		if (state != DEAD)
 		{
-			cout << "DEBUG" << endl;
-			cout << "input: " << input << endl;
-			cout << "command map: " << commands[input] << endl;
-		}
+			getline(cin, input);
 
-		coms = ParseInput(input);
+			coms = ParseInput(input);
+		}
 
 		switch (state)
 		{
@@ -70,19 +69,19 @@ int main()
 			cout << "NONE state, get help. this shouldn't happen." << endl;
 			break;
 		case MAIN_MENU:
-			MainMenu(commands[input]);
+			MainMenu(command[coms[0]]);
 			break;
 		case LOADING:
 			//idk wtf i was to do here
 			break;
 		case OUT_OF_COMBAT:
-			OOC(commands[input]);
+			OOC(command[coms[0]]);
 			break;
 		case IN_COMBAT:
-			INC(commands[input]);
+			INC(command[coms[0]]);
 			break;
 		case DEAD:
-			Dead(commands[input]);
+			Dead(command[coms[0]]);
 			break;
 		default:
 			cout << "Default of state switch_________" << endl;

@@ -10,14 +10,19 @@ using namespace std;
 
 vector <string> ParseInput(string input)
 {
-	int count = 1;
+	int count = 0;
 	char c;
 	vector <string> commands;
 	string temp;
 
-
 	if (debug)
-		cout << "parser input: " << input << "  input length: " << input.length() <<endl;
+	{
+		cout << "DEBUG" << endl;
+		cout << "input: " << input << endl;
+		cout << "command map: " << command[input] << endl;
+		cout << "parser input: " << input << "  input length: " << input.length() << endl;
+	}
+		
 
 	for (size_t i = 0; i < input.length(); i++)
 	{
@@ -34,12 +39,13 @@ vector <string> ParseInput(string input)
 			{
 				cout << "arg: " << temp << endl;
 				cout << "count: " << count << endl;
+				cout << "cmd length: " << commands.size() << endl;
 			}
 			count++;
 			temp = "";
 		}
 	}
-
+	commands.push_back(temp);
 	if (debug)
 	{
 		cout << "DEBUG" << endl;

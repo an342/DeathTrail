@@ -3,6 +3,6 @@
 
 Enemy NewEnemy()
 {
-	Enemy test;
+	Zombie test;
 	return test;
 }

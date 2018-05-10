@@ -43,4 +43,4 @@ void Target();
 
 int DIFPars(vector <string> coms);
 
-bool is_number(const std::string& s);
+int is_number(const std::string& s);

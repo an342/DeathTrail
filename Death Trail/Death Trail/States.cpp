@@ -124,5 +124,7 @@ void INC(int input)
 
 void Dead(int input)
 {
-
+	cout << "your body lies dead on the side of the desert road, soon to join the wandering dead you faught to defeat." << endl;
+	Sleep(15000);
+	Exit();
 }

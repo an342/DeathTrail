@@ -13,7 +13,9 @@ extern playerstate state;
 extern bool debug;
 extern bool breakwhile;
 
-extern map <string, int> commands;
+extern map <string, commands> command;
 
 extern Encounter currentEnc;
 extern vector <Encounter> encList;
+
+extern Player player;
