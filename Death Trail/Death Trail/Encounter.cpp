@@ -10,6 +10,16 @@
 
 using namespace std;
 
+map <Location, string> locDesc
+{
+	{ ROAD, "Road" },
+	{ DARK_ROAD, "Dark Road" },
+	{ GASS_STATION, "Gass Station" },
+	{ QUICKY_MART, "Quicky Mart" },
+	{ SCHOOL, "School" },
+	{ MALL, "Mall" }
+};
+
 
 Encounter NewEncounter(float difficulty)
 {

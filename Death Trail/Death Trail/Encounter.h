@@ -18,6 +18,9 @@ enum Location
 
 };
 
+extern map <Location, string> locDesc;
+ 
+
 class Encounter
 {
 	
@@ -28,11 +31,12 @@ public:
 	vector<Item> itemList;
 	Inventory inv;
 	Location loc;
-
+	string desc;
 	Encounter()
 	{
 		enemies = 1;
 		loc = ROAD;
+		desc = locDesc[loc];
 		lootcount = 2;
 			/*for (int i = 0; i < enemies; i++)
 		{
@@ -40,6 +44,15 @@ public:
 		enemyList.push_back(test);
 		}*/
 	};
+
+	string GetDescription()
+	{
+		return desc;
+	}
+	int EnemyCount()
+	{
+		return enemies;
+	}
 
 };
 

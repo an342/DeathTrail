@@ -50,11 +50,6 @@ void whereami()
 
 }
 
-void attack()
-{
-
-}
-
 void Exit()
 {
 	cout << "exiting...\n";
@@ -80,7 +75,17 @@ void Play()
 		cout << "Enncounter: " << i <<" | enemies: " << encounters.at(i).enemies << endl;
 	}
 	encList = encounters;
+	encounterCount = 0;
+	//currentEnc = encList[encounterCount];
 	
+	if (currentEnc.EnemyCount() > 0)
+	{
+		state = IN_COMBAT;
+	}
+	else
+	{
+		state = OUT_OF_COMBAT;
+	}
 }
 
 void Debug()
@@ -99,6 +104,29 @@ void Debug()
 		return;
 	}
 }
+
+void MoveOn()
+{
+	cout << "You pack up your gear and move on to the next stop along the road" << endl;
+	encounterCount++;
+	//cout << currentEnc.GetDescription() << endl;
+}
+
+void Search()
+{
+	//Item temp;
+}
+
+void Attack()
+{
+
+}
+
+void Target()
+{
+
+}
+
 
 int DIFPars(vector <string> coms)
 {

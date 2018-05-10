@@ -14,3 +14,11 @@ enum playerstate
 
 void MainMenu(int input);
 
+void OOC(int input);
+
+void Loading();
+
+void INC(int input);
+
+void Dead(int input);
+

@@ -6,7 +6,7 @@ using namespace std;
 
 class Encoutner;
 
-
+extern int encounterCount;
 
 extern playerstate state;
 

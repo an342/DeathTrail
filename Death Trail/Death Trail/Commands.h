@@ -18,6 +18,7 @@ enum commands
 	PLAY,			// start a game
 	LOAD,			// load saved game
 	ATTACK,			// attack somthing
+	TARGET,			// select a target
 	USE,			// use item or interactable
 	INVENTORY,		// give inventory list
 	MOVEON,			// move on to next encoutner
@@ -29,18 +30,16 @@ enum commands
 };
 
 void Welcome();
-
 void help();
-
 void whereami();
-
-void attack();
-
 void Exit();
-
 void Play();
-
 void Debug();
+void MoveOn();
+void Search();
+void Attack();
+void Target();
+
 
 int DIFPars(vector <string> coms);
 

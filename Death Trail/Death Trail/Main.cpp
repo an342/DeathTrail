@@ -16,6 +16,7 @@ bool breakwhile = false;
 
 playerstate state = NONE;
 Encounter currentEnc;
+int encounterCount;
 vector <Encounter> encList;
 
 map <string, int> commands =
@@ -35,7 +36,7 @@ map <string, int> commands =
 	{ "drop", DROP },
 	{ "exit", EXIT },
 	{ "play", PLAY },
-	{"debug", DEBUG}
+	{ "debug", DEBUG}
 };
 
 int main()
@@ -44,10 +45,6 @@ int main()
 	
 	vector <string> coms;
 
-	
-	//bool debug = true;
-	
-	
 
 	Welcome();
 
@@ -73,15 +70,19 @@ int main()
 			cout << "NONE state, get help. this shouldn't happen." << endl;
 			break;
 		case MAIN_MENU:
-			MainMenu( commands[input]);
+			MainMenu(commands[input]);
 			break;
 		case LOADING:
+			//idk wtf i was to do here
 			break;
 		case OUT_OF_COMBAT:
+			OOC(commands[input]);
 			break;
 		case IN_COMBAT:
+			INC(commands[input]);
 			break;
 		case DEAD:
+			Dead(commands[input]);
 			break;
 		default:
 			cout << "Default of state switch_________" << endl;
